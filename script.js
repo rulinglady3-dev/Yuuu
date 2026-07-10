@@ -1,33 +1,47 @@
-const questionContainer = document.querySelector(".question-container");
-const resultContainer = document.querySelector(".result-container");
+const questionContainer =
+document.querySelector(".question-container");
 
-const yesBtn = document.querySelector(".js-yes-btn");
-const noBtn = document.querySelector(".js-no-btn");
 
-const gifResult = document.querySelector(".gif-result");
-const heartLoader = document.querySelector(".cssload-main");
+const loveContainer =
+document.querySelector(".love-container");
+
+
+const yesBtn =
+document.querySelector(".js-yes-btn");
+
+
+const noBtn =
+document.querySelector(".js-no-btn");
+
+
+const loveVideo =
+document.querySelector(".love-video");
 
 
 let yesScale = 1;
 
 
 
-// No butonu kaçma
-
-function moveNoButton() {
-
-    const maxX = window.innerWidth - noBtn.offsetWidth;
-    const maxY = window.innerHeight - noBtn.offsetHeight;
+function moveNo(){
 
 
-    const newX = Math.random() * maxX;
-    const newY = Math.random() * maxY;
+    const x =
+    Math.random() *
+    (window.innerWidth - noBtn.offsetWidth);
 
 
-    noBtn.style.position = "fixed";
+    const y =
+    Math.random() *
+    (window.innerHeight - noBtn.offsetHeight);
 
-    noBtn.style.left = newX + "px";
-    noBtn.style.top = newY + "px";
+
+
+    noBtn.style.position="fixed";
+
+    noBtn.style.left=x+"px";
+
+    noBtn.style.top=y+"px";
+
 
 
     // Yes 3 kat büyüsün
@@ -42,16 +56,13 @@ function moveNoButton() {
 
 
 
-// Bilgisayar
 
 noBtn.addEventListener(
 "mouseenter",
-moveNoButton
+moveNo
 );
 
 
-
-// Telefon
 
 noBtn.addEventListener(
 "pointerdown",
@@ -59,45 +70,26 @@ noBtn.addEventListener(
 
     e.preventDefault();
 
-    moveNoButton();
+    moveNo();
 
 });
 
 
 
 
-// Yes butonu
 
 yesBtn.addEventListener(
 "click",
 ()=>{
 
 
-    questionContainer.style.display = "none";
+    questionContainer.style.display="none";
 
 
-    heartLoader.style.display = "block";
+    loveContainer.style.display="block";
 
 
-
-    setTimeout(()=>{
-
-
-        heartLoader.style.display = "none";
-
-
-        resultContainer.style.display = "block";
-
-
-        if(gifResult.play){
-
-            gifResult.play();
-
-        }
-
-
-    },3000);
-
+    loveVideo.play();
 
 
 });
