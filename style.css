@@ -1,134 +1,113 @@
-* {
-    box-sizing: border-box;
+*{
+    box-sizing:border-box;
 }
 
 
-body {
+body{
 
-    margin: 0;
-    height: 100vh;
+    margin:0;
+    height:100vh;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
-    overflow: hidden;
+    overflow:hidden;
 
-    background: #ffe6ef;
+    background:#ffe6ef;
 
-    font-family: Arial, sans-serif;
-
-}
-
-
-
-.question-container {
-
-    text-align: center;
+    font-family:Arial, sans-serif;
 
 }
 
 
 
-h1 {
+.question-container,
+.love-container{
 
-    color: #ff3b7a;
-
-    font-size: 40px;
-
-}
-
-
-
-.buttons {
-
-    margin-top: 30px;
-
-    display: flex;
-
-    justify-content: center;
-
-    gap: 30px;
+    text-align:center;
 
 }
 
 
 
-button {
+.reply-video,
+.love-video{
 
-    border: none;
+    width:300px;
 
-    padding: 15px 35px;
+    max-width:80vw;
 
-    border-radius: 30px;
-
-    font-size: 22px;
-
-    cursor: pointer;
-
-    transition: transform .3s ease;
+    border-radius:20px;
 
 }
 
 
 
-.js-yes-btn {
+h1{
 
-    background: #ff4f8b;
-
-    color: white;
+    color:#ff3b7a;
 
 }
 
 
 
-.js-no-btn {
+.buttons{
 
-    background: #777;
+    margin-top:30px;
 
-    color: white;
+    display:flex;
 
-    position: relative;
+    justify-content:center;
 
-}
-
-
-
-/* Kalp animasyonu alanı */
-
-.cssload-main {
-
-    display: none;
+    gap:30px;
 
 }
 
 
 
+button{
 
-/* Sonuç */
+    border:none;
 
-.result-container {
+    padding:15px 35px;
 
-    display: none;
+    border-radius:30px;
 
-    text-align: center;
+    font-size:22px;
 
-}
-
-
-
-.gif-result {
-
-    width: 250px;
+    cursor:pointer;
 
 }
 
 
 
-/* Yes büyürken yumuşak olsun */
+.js-yes-btn{
 
-.js-yes-btn {
+    background:#ff4f8b;
 
-    transition: transform .3s ease;
+    color:white;
+
+    transition:.3s;
+
+}
+
+
+
+.js-no-btn{
+
+    background:#777;
+
+    color:white;
+
+    position:relative;
+
+}
+
+
+
+.love-container{
+
+    display:none;
 
 }
